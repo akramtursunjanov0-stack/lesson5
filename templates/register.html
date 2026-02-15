@@ -1,0 +1,26 @@
+<center>
+<h2>Регистрация</h2>
+<form method="post">
+    {% csrf_token %}
+
+    <label>ФИО</label> {{ form.full_name }}<br><br>
+    <label>Логин</label> {{ form.username }}<br><br>
+    <label>Пароль</label> {{ form.password }}<br><br>
+    <label>Возраст</label> {{ form.age }}<br><br>
+    <label>Телефон</label> {{ form.phone }}<br><br>
+    <label>Электронная почта</label> {{ form.email }}<br><br>
+    <label>Город</label> {{ form.city }}<br><br>
+    <label>Образование</label> {{ form.education }}<br><br>
+    <label>Опыт работы</label> {{ form.experience }}<br><br>
+    <label>Навыки</label> {{ form.skills }}<br><br>
+    <label>Желаемая должность</label> {{ form.desired_position }}<br><br>
+    <label>Ожидаемая зарплата</label> {{ form.salary_expectation }}<br><br>
+    <label>О себе</label> {{ form.about }}<br><br>
+
+        <label>Введите текст с картинки</label><br><br>
+    {{ form.captcha }}<br><br>
+
+    <button type="submit">Зарегистрироваться</button><br><br>
+</form>
+<a href="{% url 'login' %}">Войти</a>
+</center>
