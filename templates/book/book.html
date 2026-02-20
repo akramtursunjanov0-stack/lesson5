@@ -1,0 +1,14 @@
+<center>
+
+<button><a href="/create_book/">Добавить</a></button>
+<br>
+{% for i in book %}
+
+<img src="{{ i.image.url }}" alt="" width="300" height="300">
+<h1>{{ i.title }}</h1>
+<p><a href="/book/{{ i.id }}/">Подробнее</a></p>
+<p> <a href="/book/{{ i.id }}/delete/">Удалить</a> </p>
+<p> <a href="/book/{{ i.id }}/update/">Редактировать</a> </p>
+
+{% endfor %}
+</center>
